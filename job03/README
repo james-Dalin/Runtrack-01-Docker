@@ -1,0 +1,50 @@
+# Job 03
+
+## Commandes principales utilisées 
+
+1. docker ps
+2. docker ps -a
+3. docker images
+4. docker images -a
+5. docker network ls
+
+## Commades secondaires utilisées
+
+1. docker inspect 
+2. docker log
+
+## Compréhension des commandes
+
+### docker ps et avec le -a
+
+En entrant la commande "docker ps" affiche les conteneurs. Étant donné qu'il n'y aucun conteneur qui a été lancé, il n'affiche qu'un tableau vide
+
+Avec le -a, qui veut dire "all", il affiche tout ce qui est resté sur mon ordinateur, y comprit les conteneurs arrêtés : le hello-world et le jeu Mario.
+
+### docker image et avec le -a
+
+Avac "docker images", cette commande liste les données locales sur mon ordinateur.
+
+Avec le -a, ça montre les images intermédiaires. Docker ne me montre que l'image finale si je ne mets pas le -a. Avec le -a, je peux vois les couches sous-jacentes de l'image.
+
+### docker network ls
+
+Cette commande fait apparaître dans un tableau trois réseaux créés par défauts : bridge, host et none
+
+le bridge représente le réseau par défaut. Quand je mets en marche un conteneur, il atterit dans le bridge par défaut. Il atterit ici que si je ne précise pas le port avec "-p". Avec le jeu Mario, j'ai précisé le port que je voulais exactement, c'est pour ça qu'il n'est allé dans le bridge
+
+le host supprime l'isolation réseau, comme si je n'étais pas dans le conteneur.
+
+le none n'attribue aucune connexion. Le conteneur est complètement isolé. Utile pour tester des choses localement.
+
+## Commandes bonus du monitoring
+
+1. docker inspect.
+2. docker logs
+
+## Compréhension des commandes
+
+le docker inspect va montrer toutes les informations du conteneur. C'est le cahier médical d'un patient : là où ps montre la surface, inspect monde l'entièreté de la manière dont est fait le conteneur dans un fichier JSON.
+
+Quant à logs, il affiche les journaux d'un conteneur : c'est tout ce que le programme à écrit dans la console.
+

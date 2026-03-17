@@ -1,0 +1,45 @@
+# Job 03 - Commande de monitoring
+
+## Commande exécutée
+
+docker ps
+
+### Ce que ça fait
+
+La même chose que la job02. Il ne montre rien parce que rien ne tourne.
+
+## Commande exécutée
+
+docerk ps -a
+
+### Ce que cette commande fait
+
+Montre tout ce qui est stockée. Même quand les conteneurs ne sont pas lancés. Le hello-world, et le Mario.
+
+## Commande faite
+
+docker images.
+
+### Ce que l'on voit avec cette commande
+
+Les images locales.
+
+## La commande suivante
+
+docker images -a
+
+### Ce qu'elle fait
+
+Le "-a" veut dire all. Cela montre toutes les images, même les intermédiaires.
+
+## La commande exécutée
+
+docker network ls
+
+### Ce qu'elle montre
+
+Elle montre les réseaux virtuels de Docker, avec Bridge, Host et none. Chacune à une particalirité propre : 
+
+1. Bridge : le réseau par défaut.
+2. Host : le réseau spécial qui surpprime l'isolation réseau.
+3. None : aucun réseau. Le conteneur vide — pas de connexion entrante, pas de connexion entrante.
